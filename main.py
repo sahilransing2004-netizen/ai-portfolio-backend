@@ -80,7 +80,6 @@ async def chat(req: ChatRequest):
     if processed_messages and processed_messages[-1]["role"] == "user":
         last_content = processed_messages[-1]["content"]
         if looks_like_job_description(last_content):
-            print("=== JD DETECTED ===")
             processed_messages[-1]["content"] = (
                 last_content
                 + "\n\n(This is a job description. Your reply MUST start with a line in exactly this format: \"Suitability Score: XX%\" where XX is a real number you calculate based on how well the candidate data matches this JD. Do not skip this line or write \"Suitability:\" without a percentage.)"

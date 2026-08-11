@@ -68,11 +68,27 @@ class Msg(BaseModel):
 class ChatRequest(BaseModel):
     messages: list[Msg]   # <-- matches sahil-os-frontend's { messages: [...] }
 
+def looks_like_job_description(text: str) -> bool:
+    keywords = ["requirements", "responsibilities", "we are hiring", "we're hiring", "qualifications", "job description", "years of experience", "must have", "nice to have"]
+    lower = text.lower()
+    return len(text) > 200 and sum(1 for k in keywords if k in lower) >= 1
+
 @app.post("/chat")
 async def chat(req: ChatRequest):
+    processed_messages = [{"role": m.role, "content": m.content} for m in req.messages]
+
+    if processed_messages and processed_messages[-1]["role"] == "user":
+        last_content = processed_messages[-1]["content"]
+        if looks_like_job_description(last_content):
+            print("=== JD DETECTED ===")
+            processed_messages[-1]["content"] = (
+                last_content
+                + "\n\n(This is a job description. Your reply MUST start with a line in exactly this format: \"Suitability Score: XX%\" where XX is a real number you calculate based on how well the candidate data matches this JD. Do not skip this line or write \"Suitability:\" without a percentage.)"
+            )
+
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT + "\n\nCandidate data:\n" + json.dumps(CANDIDATE_DATA)},
-        *[{"role": m.role, "content": m.content} for m in req.messages],
+        *processed_messages,
     ]
 
     def stream():

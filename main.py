@@ -67,6 +67,8 @@ class Msg(BaseModel):
 
 class ChatRequest(BaseModel):
     messages: list[Msg]   # <-- matches sahil-os-frontend's { messages: [...] }
+    language: str | None = None   # "hi" forces a Hindi reply regardless of input script
+    language: str | None = None   # "hi" forces a Hindi reply regardless of input script
 
 def looks_like_job_description(text: str) -> bool:
     keywords = ["requirements", "responsibilities", "we are hiring", "we're hiring", "qualifications", "job description", "years of experience", "must have", "nice to have"]
@@ -83,6 +85,16 @@ async def chat(req: ChatRequest):
             processed_messages[-1]["content"] = (
                 last_content
                 + "\n\n(This is a job description. Your reply MUST start with a line in exactly this format: \"Suitability Score: XX%\" where XX is a real number you calculate based on how well the candidate data matches this JD. Do not skip this line or write \"Suitability:\" without a percentage.)"
+            )
+        if req.language == "hi":
+            processed_messages[-1]["content"] = (
+                processed_messages[-1]["content"]
+                + "\n\n(Reply in Hindi regardless of the script used above. Use Devanagari if the user's message was in Devanagari, otherwise use Hinglish in Roman letters.)"
+            )
+        if req.language == "hi":
+            processed_messages[-1]["content"] = (
+                processed_messages[-1]["content"]
+                + "\n\n(Reply in Hindi regardless of the script used above. Use Devanagari if the user's message was in Devanagari, otherwise use Hinglish in Roman letters.)"
             )
 
     messages = [

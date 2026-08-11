@@ -5,105 +5,146 @@
   "contact": {
     "email": "sahilransing2004@gmail.com",
     "phone": "+91-9326447603",
-    "github": "https://github.com/sahilransing2004-netizen",
-    "linkedin": "https://www.linkedin.com/in/sahil-ransing-861116374"
+    "github": "github.com/sahilransing2004-netizen",
+    "linkedin": null
   },
   "summary": "Third-year Electronics & Communication Engineering student pursuing a self-directed 12-month DevOps/MLOps roadmap covering Linux, Bash, Git/GitHub, cloud fundamentals, and CI/CD practices. Hands-on experience building and deploying full-stack and data-driven applications, with AWS and IBM cloud/data certifications and a consistent GitHub commit history. Seeking an entry-level DevOps/MLOps Intern role to apply automation, scripting, and cloud deployment skills in a production environment.",
   "education": [
     {
       "degree": "B.Tech in Electronics & Communication Engineering (ECE)",
       "institution": "MIT ADT University, Pune",
-      "year": "Third Year (ongoing)",
-      "cgpa": "6.89"
+      "year": "Third Year",
+      "cgpa": "6.89",
+      "score": null
     },
     {
       "degree": "Diploma in Electronics & Telecommunication Engineering",
       "institution": "AISSMS Polytechnic, Pune",
-      "year": "2021 - 2024",
+      "year": "2021 \u2013 2024",
+      "cgpa": null,
       "score": "72%"
     },
     {
       "degree": "SSC (10th Grade), CBSE",
       "institution": "Research and Development Establishment (Engineers) School, Kalas-Vishrantwadi, Pune",
       "year": "2020",
+      "cgpa": null,
       "score": "67%"
     }
   ],
   "skills": {
-    "languages": ["C", "C++", "Python", "SQL"],
-    "devops_tools": ["Linux (Ubuntu/WSL2)", "Bash Scripting", "Git", "GitHub", "Docker", "CI/CD fundamentals"],
-    "cloud": ["AWS (Cloud Practitioner Essentials, Generative AI, Job Roles in Cloud)", "Basic cloud deployment (Render)"],
-    "data_web": ["Flask", "Supabase", "Pandas", "Plotly", "Dash", "REST APIs", "FastAPI"],
-    "other": ["Data Structures & Algorithms", "Data Analytics", "Prompt Engineering", "Relational Databases"]
+    "languages": [
+      "C",
+      "C++",
+      "Python",
+      "SQL"
+    ],
+    "devops_tools": [
+      "Linux (Ubuntu/WSL2)",
+      "Bash Scripting",
+      "Git",
+      "GitHub",
+      "Docker",
+      "CI/CD fundamentals"
+    ],
+    "cloud": [
+      "AWS (Cloud Practitioner Essentials, Generative AI, Job Roles in Cloud)",
+      "Basic cloud deployment (Render)"
+    ],
+    "data_web": [
+      "Flask",
+      "Supabase",
+      "Pandas",
+      "Plotly",
+      "Dash",
+      "REST APIs"
+    ],
+    "other": [
+      "Data Structures & Algorithms",
+      "Data Analytics",
+      "Prompt Engineering",
+      "Relational Databases"
+    ]
   },
   "projects": [
     {
       "name": "Pune City AQI Dashboard",
-      "tech": ["Python", "Dash", "Plotly", "Pandas", "AQICN API"],
-      "description": "Built and deployed a real-time air quality dashboard for Pune using live AQICN API data, with interactive Plotly visualizations and Dash components showing AQI trends by location. Rebuilt from scratch with clean architecture and environment-variable-based configuration.",
-      "github": null
+      "tech": [
+        "Python",
+        "Dash",
+        "Plotly",
+        "Pandas",
+        "AQICN API"
+      ],
+      "description": "Built and deployed a real-time air quality dashboard for Pune using live data from the AQICN API. Designed interactive Plotly visualizations and Dash components to display AQI trends by location. Rebuilt project from scratch with clean architecture and environment-variable-based configuration; published on GitHub.",
+      "github": "github.com/sahilransing2004-netizen",
+      "collaborators": null
     },
     {
       "name": "Expense Tracking & Budget Management System",
-      "tech": ["Python", "Flask", "Supabase", "Render"],
-      "description": "Full-stack expense tracking web app with Flask backend and Supabase for authentication and data storage. Deployed on Render with GitHub-based continuous deployment. Resolved real-world integration issues including API key format changes and environment configuration errors.",
+      "tech": [
+        "Python",
+        "Flask",
+        "Supabase",
+        "Render"
+      ],
+      "description": "Developed a full-stack expense tracking web app with Flask backend and Supabase for authentication and data storage. Deployed the application on Render with GitHub-based continuous deployment. Resolved real-world integration issues including API key format changes and environment configuration errors.",
+      "github": "github.com/sahilransing2004-netizen",
+      "collaborators": null
+    },
+    {
+      "name": "Smart Doc Extractor \u2014 AI-Powered Document Processing API",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "Tesseract OCR",
+        "Docker",
+        "Pytest"
+      ],
+      "description": "Built a FastAPI service with hybrid PDF extraction, combining direct text parsing with Tesseract OCR fallback for scanned documents. Containerized the service with Docker and wrote a pytest suite covering extraction accuracy and API endpoints. Built a drag-and-drop frontend for uploads and deployed the full service on Render.",
+      "github": "github.com/sahilransing2004-netizen",
+      "collaborators": null
+    },
+    {
+      "name": "HeartScript \u2014 AI-Powered ECG Anomaly Detection",
+      "tech": [
+        "Python",
+        "Few-Shot Learning"
+      ],
+      "description": "Collaborated in a team to build a few-shot learning model for detecting anomalies in ECG signals. Contributed to data preprocessing and model evaluation as part of an academic AI/healthcare research project.",
       "github": null,
-      "collaborators": ["Sai Ranaware"]
-    },
-    {
-      "name": "Smart Doc Extractor - AI-Powered Document Processing API",
-      "tech": ["Python", "FastAPI", "Tesseract OCR", "Docker", "Pytest"],
-      "description": "FastAPI service with hybrid PDF extraction combining direct text parsing with Tesseract OCR fallback for scanned documents. Containerized with Docker, with a pytest suite covering extraction accuracy and API endpoints. Includes a drag-and-drop frontend, deployed on Render.",
-      "github": null
-    },
-    {
-      "name": "HeartScript - AI-Powered ECG Anomaly Detection",
-      "tech": ["Python", "Few-Shot Learning"],
-      "description": "Final-year project. Collaborated in a team to build a few-shot learning model for detecting anomalies in ECG signals, trained on 20,000+ ECG recordings. Contributed to data preprocessing and model evaluation.",
-      "github": null,
-      "collaborators": ["Faraaz Husain", "Noman Shaikh", "Saee Kadam"]
-    },
-    {
-      "name": "AI Mental Health Text Classifier",
-      "tech": ["Python", "scikit-learn", "TF-IDF", "GridSearchCV"],
-      "description": "5-category text classification chatbot with a safety routing layer for distress expressions. Original 700-sample labeled dataset. Used a grouped train/test split by template ID to prevent data leakage; best model was Naive Bayes at ~59% test accuracy.",
-      "github": null
-    },
-    {
-      "name": "Dockerized Java-Login-App",
-      "tech": ["Docker", "Java"],
-      "description": "Multi-stage Docker build with docker-compose, as part of the DevOps/MLOps roadmap.",
-      "github": null
+      "collaborators": [
+        "Team"
+      ]
     }
   ],
   "experience": [],
   "certifications": [
-    "AWS Cloud Practitioner Essentials - AWS",
-    "Introduction to Generative AI: Art of the Possible - AWS",
-    "Job Roles in the Cloud - AWS",
-    "Foundations of Prompt Engineering - AWS",
-    "SQL and Relational Databases 101 - IBM",
-    "Data Analytics Job Simulation - Deloitte (Forage)",
-    "C & C++ Programming - Disha Coding Classes",
-    "Develop Generative AI Applications: Get Started - IBM (Coursera)",
-    "Introduction to Artificial Intelligence - Adobe SkillsBuild",
-    "Natural Language Processing & Computer Vision - Adobe SkillsBuild",
-    "Explore Microsoft 365 Security Foundations - Microsoft",
-    "Work Smarter with Microsoft Word - Coursera/Microsoft",
-    "Digital Marketing Certified - HubSpot Skills Network Academy",
-    "Business Communications - HP LIFE",
-    "Professional Networking for Career Growth - HP LIFE",
-    "Foundations of Project Management - Google (Coursera)",
-    "30+ Google Cloud Skill Badges (Cloud Study Jams & Arcade, 2025-26)"
+    "AWS Cloud Practitioner Essentials",
+    "Introduction to Artificial Intelligence",
+    "Introduction to Generative AI: Art of the Possible",
+    "Natural Language Processing & Computer Vision",
+    "Job Roles in the Cloud",
+    "Explore Microsoft 365 Security Foundations",
+    "Foundations of Prompt Engineering",
+    "Work Smarter with Microsoft Word",
+    "SQL and Relational Databases 101",
+    "Digital Marketing Certified",
+    "Data Analytics Job Simulation",
+    "Business Communications",
+    "C & C++ Programming",
+    "Professional Networking for Career Growth",
+    "Develop Generative AI Applications: Get Started",
+    "Foundations of Project Management"
   ],
   "achievements": [
-    "Attended the 3rd Annual SemiX Summit at IIT Bombay (September 25-26, 2025), engaging with industry and academic talks on semiconductor and emerging technology trends.",
-    "Gained hands-on practice with the AWS Management Console, including launching and configuring EC2 instances.",
-    "Earned 30+ skill badges and completed Arcade challenges in the Google Cloud Study Jams & Arcade program (2025-26), receiving Google Cloud swag for program participation."
+    "Attended the 3rd Annual SemiX Summit at IIT Bombay (September 25-26, 2025)",
+    "Gained hands-on practice with the AWS Management Console, including launching and configuring EC2 instances",
+    "Earned 30+ skill badges and completed Arcade challenges in the Google Cloud Study Jams & Arcade program (2025-26)"
   ],
   "additional_info": [
-    "Actively maintaining a 12-month self-directed DevOps/MLOps learning roadmap, logged publicly on GitHub (devops-ai-roadmap).",
-    "Comfortable working across Windows 11 + WSL2/Ubuntu environments for development and scripting.",
-    "Languages: Hindi, Marathi, English (fluent); German, Spanish (learning)."
+    "Actively maintaining a 12-month self-directed DevOps/MLOps learning roadmap, logged publicly on GitHub (devops-ai-roadmap)",
+    "Comfortable working across Windows 11 + WSL2/Ubuntu environments for development and scripting",
+    "Languages: Hindi, Marathi, English (fluent); German, Spanish (learning)"
   ]
 }
